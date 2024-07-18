@@ -1,11 +1,20 @@
-import "./navbar.scss"
+import './navbar.scss';
+import Sidebar from '../Sidebar/Sidebar';
+import {motion} from "framer-motion"
 const Navbar = () => {
   return (
     <div className="navbar">
+      <Sidebar/>
         {/*sidebar*/}
 
         <div className="wrapper">
-            <span>Arpit Kaul</span>
+            <motion.span
+              initial={{opacity: 0, scale: 0.5}}
+              animate={{opacity:1 , scale:1}}
+              transition={{duration:0.5}}
+              >
+                A.K
+            </motion.span>
             <div className="social">
                 <a href="#"><img src="/facebook.png" alt="" /></a>
                 <a href="#"><img src="/instagram.png" alt="" /></a>
